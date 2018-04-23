@@ -1,0 +1,13 @@
+spring:
+  kafka:
+    bootstrap-servers:
+      - "192.168.1.63:9092"
+      - "192.168.1.63:9093"
+      - "192.168.1.63:9094"
+    consumer:
+      auto-offset-reset: earliest
+
+hdfs:
+  path: hdfs://192.168.1.60:9000
+  file_home: /user/lg/music/
+  user: root
