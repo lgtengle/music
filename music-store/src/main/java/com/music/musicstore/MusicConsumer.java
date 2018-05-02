@@ -18,7 +18,7 @@ import java.util.concurrent.*;
  *
  * @author leiguang
  */
-@Component
+//@Component
 public class MusicConsumer {
 
     @Autowired
@@ -37,7 +37,7 @@ public class MusicConsumer {
 
     private int id;
 
-    @KafkaListener(id = "test", topics = "my-mutil-topics")
+    //@KafkaListener(id = "test", topics = "my-mutil-topics")
     public void consoumer(String value){
         if (!StringUtils.isBlank(value)){
             container.add(value);
