@@ -3,7 +3,7 @@
 from scrapy import Spider
 from music.items import XiamiUser
 from scrapy import Request
-
+from wsgiref.simple_server import make_server
 
 class DmozSpider(Spider):
 
@@ -22,8 +22,6 @@ class DmozSpider(Spider):
         "http://www.xiami.com/space/following/u/3069638"
     ]
     def parse(self, response):
-
-
         try:
             if (response.url.find("/page/") < 0):#添加下一页
                 page = len(response.xpath('//*[@id="column695"]/div[2]/div[1]/div/div[3]/div[2]/a'))
